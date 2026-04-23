@@ -47,7 +47,7 @@ public class EstudianteService implements UserDetailsService {
     @Transactional
     public Estudiante register(EstudianteDTO dto) {
         if (estudianteRepository.findByEmail(dto.getEmail()).isPresent()) {
-            throw new IllegalArgumentException("Email already registered: " + dto.getEmail());
+            throw new IllegalArgumentException("Email already registered");
         }
         Estudiante e = new Estudiante();
         e.setNombre(dto.getNombre());

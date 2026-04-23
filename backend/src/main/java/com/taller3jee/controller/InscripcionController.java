@@ -4,6 +4,7 @@ import com.taller3jee.domain.Curso;
 import com.taller3jee.domain.Estudiante;
 import com.taller3jee.domain.EstadoInscripcion;
 import com.taller3jee.domain.Inscripcion;
+import com.taller3jee.dto.InscripcionRequest;
 import com.taller3jee.dto.InteraccionRequest;
 import com.taller3jee.dto.InscripcionDTO;
 import com.taller3jee.dto.ProgresoDTO;
@@ -31,9 +32,9 @@ public class InscripcionController {
     private final CursoRepository cursoRepository;
 
     @PostMapping
-    public ResponseEntity<InscripcionDTO> inscribir(@RequestBody Map<String, Long> body) {
-        Long estudianteId = body.get("estudianteId");
-        Long cursoId = body.get("cursoId");
+    public ResponseEntity<InscripcionDTO> inscribir(@RequestBody InscripcionRequest body) {
+        Long estudianteId = body.getEstudianteId();
+        Long cursoId = body.getCursoId();
         Estudiante estudiante = estudianteRepository.findById(estudianteId)
                 .orElseThrow(() -> new EntityNotFoundException("Estudiante not found: " + estudianteId));
         Curso curso = cursoRepository.findById(cursoId)

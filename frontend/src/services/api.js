@@ -37,6 +37,7 @@ export const authApi = {
 
 // ─── Cursos ──────────────────────────────────────────────────────────────────
 export const cursosApi = {
+  getCursos: () => api.get('/cursos'),
   getCurso: (id) => api.get(`/cursos/${id}`),
   getClasesByCurso: (cursoId) => api.get(`/cursos/${cursoId}/clases`),
 };
