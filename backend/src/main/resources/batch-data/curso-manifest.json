@@ -1,0 +1,770 @@
+{
+  "curso": {
+    "nombre": "Estructuras de Datos",
+    "descripcion": "Curso completo de estructuras de datos: arrays, listas, árboles, grafos, tablas hash y algoritmos de ordenamiento y búsqueda.",
+    "version": "1.0"
+  },
+  "clases": [
+    {
+      "numero": 1,
+      "titulo": "Introducción a las Estructuras de Datos",
+      "descripcion": "Visión general de estructuras de datos, tipos y aplicaciones.",
+      "orden": 1,
+      "duracionEstimadaMin": 60,
+      "contenidos": [
+        {"titulo": "¿Qué son las Estructuras de Datos?", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Las estructuras de datos son formas de organizar y almacenar datos en una computadora para que puedan ser accedidos y modificados eficientemente."},
+        {"titulo": "Slides: Introducción", "tipo": "PPTX", "ordenEnClase": 2, "tamanioBytes": 512000},
+        {"titulo": "Video: Introducción a ED", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 104857600},
+        {"titulo": "Recursos adicionales", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 1 - Introducción",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la principal ventaja de usar estructuras de datos eficientes?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Mayor velocidad de procesamiento", "Menor uso de memoria", "Mejor organización del código", "Facilidad de depuración"], "respuestaCorrecta": "Mayor velocidad de procesamiento"},
+          {"enunciado": "¿Qué tipo de estructura de datos es un array?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Lineal", "No lineal", "Jerárquica", "Gráfica"], "respuestaCorrecta": "Lineal"},
+          {"enunciado": "¿Las estructuras de datos lineales almacenan elementos en secuencia?", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 2,
+      "titulo": "Complejidad Algorítmica - Notación Big O",
+      "descripcion": "Análisis de complejidad temporal y espacial usando notación Big O.",
+      "orden": 2,
+      "duracionEstimadaMin": 90,
+      "contenidos": [
+        {"titulo": "Introducción a Big O", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "La notación Big O describe el comportamiento asintótico de un algoritmo en términos de tiempo de ejecución o espacio en memoria."},
+        {"titulo": "Guía de Complejidades", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 204800},
+        {"titulo": "Video: Big O Notation", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 157286400},
+        {"titulo": "Cheat Sheet Big O", "tipo": "IMAGE", "ordenEnClase": 4, "urlRecurso": "https://www.bigocheatsheet.com/img/big-o-cheat-sheet-poster.png"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 2 - Big O",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad de acceso a un elemento en un array por índice?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(1)", "O(n)", "O(log n)", "O(n²)"], "respuestaCorrecta": "O(1)"},
+          {"enunciado": "¿Cuál es la complejidad del algoritmo Bubble Sort en el peor caso?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(n²)", "O(n log n)", "O(n)", "O(1)"], "respuestaCorrecta": "O(n²)"},
+          {"enunciado": "O(log n) es más eficiente que O(n) para valores grandes de n.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 3,
+      "titulo": "Arrays y Matrices",
+      "descripcion": "Operaciones sobre arrays unidimensionales y matrices bidimensionales.",
+      "orden": 3,
+      "duracionEstimadaMin": 75,
+      "contenidos": [
+        {"titulo": "Arrays en Java", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un array es una colección de elementos del mismo tipo almacenados en posiciones contiguas de memoria."},
+        {"titulo": "Ejercicios de Arrays", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 102400},
+        {"titulo": "Video: Matrices en Java", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 125829120}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 3 - Arrays",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es el índice del primer elemento en un array de Java?", "tipo": "MULTIPLE_CHOICE", "opciones": ["0", "1", "-1", "Depende del tipo"], "respuestaCorrecta": "0"},
+          {"enunciado": "¿Cuál es la complejidad de insertar un elemento al final de un array dinámico amortizado?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(1)", "O(n)", "O(log n)", "O(n²)"], "respuestaCorrecta": "O(1)"},
+          {"enunciado": "En una matriz de m filas y n columnas, ¿cuántos elementos contiene?", "tipo": "MULTIPLE_CHOICE", "opciones": ["m*n", "m+n", "m²", "n²"], "respuestaCorrecta": "m*n"},
+          {"enunciado": "Los arrays en Java son de tamaño fijo una vez creados.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 4,
+      "titulo": "Listas Enlazadas Simples",
+      "descripcion": "Implementación y operaciones sobre listas enlazadas simples.",
+      "orden": 4,
+      "duracionEstimadaMin": 90,
+      "contenidos": [
+        {"titulo": "Concepto de Lista Enlazada", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Una lista enlazada es una estructura de datos lineal donde cada elemento (nodo) contiene datos y una referencia al siguiente nodo."},
+        {"titulo": "Implementación Lista Enlazada", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: Linked Lists", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 209715200},
+        {"titulo": "Visualización Interactiva", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/list"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 4 - Listas Enlazadas",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad de insertar un nodo al inicio de una lista enlazada?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(1)", "O(n)", "O(log n)", "O(n²)"], "respuestaCorrecta": "O(1)"},
+          {"enunciado": "¿Cuál es la complejidad de buscar un elemento en una lista enlazada simple?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(n)", "O(1)", "O(log n)", "O(n log n)"], "respuestaCorrecta": "O(n)"},
+          {"enunciado": "En una lista enlazada simple, ¿cada nodo tiene referencia al siguiente y al anterior?", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Falso"}
+        ]
+      }
+    },
+    {
+      "numero": 5,
+      "titulo": "Listas Doblemente Enlazadas",
+      "descripcion": "Listas donde cada nodo apunta al siguiente y al anterior.",
+      "orden": 5,
+      "duracionEstimadaMin": 80,
+      "contenidos": [
+        {"titulo": "Doubly Linked List", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Una lista doblemente enlazada tiene nodos con referencias tanto al siguiente como al anterior nodo, permitiendo recorrido bidireccional."},
+        {"titulo": "Diagramas de Listas Dobles", "tipo": "IMAGE", "ordenEnClase": 2},
+        {"titulo": "Video: Doubly Linked Lists", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 178257920},
+        {"titulo": "Ejercicios PDF", "tipo": "PDF", "ordenEnClase": 4, "tamanioBytes": 204800}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 5 - Listas Dobles",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuántas referencias por nodo tiene una lista doblemente enlazada?", "tipo": "MULTIPLE_CHOICE", "opciones": ["2", "1", "3", "4"], "respuestaCorrecta": "2"},
+          {"enunciado": "¿Cuál es la ventaja principal de una lista doblemente enlazada sobre la simple?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Recorrido bidireccional", "Menor uso de memoria", "Acceso aleatorio", "Mayor velocidad de búsqueda"], "respuestaCorrecta": "Recorrido bidireccional"},
+          {"enunciado": "La eliminación de un nodo en una lista doble es O(1) si se tiene referencia al nodo.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 6,
+      "titulo": "Listas Circulares",
+      "descripcion": "Listas donde el último nodo apunta al primero.",
+      "orden": 6,
+      "duracionEstimadaMin": 70,
+      "contenidos": [
+        {"titulo": "Listas Circulares", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "En una lista circular, el último nodo apunta de vuelta al primero, formando un ciclo."},
+        {"titulo": "Video: Circular Lists", "tipo": "VIDEO", "ordenEnClase": 2, "tamanioBytes": 146800640},
+        {"titulo": "Ejercicios Listas Circulares", "tipo": "PDF", "ordenEnClase": 3, "tamanioBytes": 153600}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 6 - Listas Circulares",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "En una lista circular, ¿qué referencia tiene el último nodo?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Al primer nodo", "A null", "Al nodo anterior", "A sí mismo"], "respuestaCorrecta": "Al primer nodo"},
+          {"enunciado": "¿Cuál es un caso de uso común para listas circulares?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Planificación de procesos Round Robin", "Búsqueda binaria", "Ordenamiento rápido", "Árboles AVL"], "respuestaCorrecta": "Planificación de procesos Round Robin"},
+          {"enunciado": "Una lista circular puede ser tanto simple como doblemente enlazada.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 7,
+      "titulo": "Pilas (Stacks)",
+      "descripcion": "Estructura LIFO: operaciones push, pop y peek.",
+      "orden": 7,
+      "duracionEstimadaMin": 75,
+      "contenidos": [
+        {"titulo": "Pilas LIFO", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Una pila es una estructura de datos LIFO (Last In, First Out) donde el último elemento insertado es el primero en ser eliminado."},
+        {"titulo": "Slides: Stacks", "tipo": "PPTX", "ordenEnClase": 2, "tamanioBytes": 409600},
+        {"titulo": "Video: Stacks", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 167772160},
+        {"titulo": "Visualización Stack", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/list"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 7 - Pilas",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué significa LIFO?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Last In First Out", "Last In First Over", "List In Full Order", "Linear Input Flow Output"], "respuestaCorrecta": "Last In First Out"},
+          {"enunciado": "¿Cuál operación agrega un elemento a una pila?", "tipo": "MULTIPLE_CHOICE", "opciones": ["push", "pop", "peek", "enqueue"], "respuestaCorrecta": "push"},
+          {"enunciado": "Las pilas se usan en la gestión de llamadas a funciones (call stack).", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 8,
+      "titulo": "Colas (Queues)",
+      "descripcion": "Estructura FIFO: operaciones enqueue y dequeue.",
+      "orden": 8,
+      "duracionEstimadaMin": 75,
+      "contenidos": [
+        {"titulo": "Colas FIFO", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Una cola es una estructura de datos FIFO (First In, First Out) donde el primer elemento insertado es el primero en ser eliminado."},
+        {"titulo": "Ejercicios de Colas", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 204800},
+        {"titulo": "Video: Queues", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 146800640}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 8 - Colas",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué significa FIFO?", "tipo": "MULTIPLE_CHOICE", "opciones": ["First In First Out", "Fast Input Fast Output", "First In Final Order", "Forward Input Flow Out"], "respuestaCorrecta": "First In First Out"},
+          {"enunciado": "¿Qué operación elimina un elemento de una cola?", "tipo": "MULTIPLE_CHOICE", "opciones": ["dequeue", "pop", "remove", "delete"], "respuestaCorrecta": "dequeue"},
+          {"enunciado": "Las impresoras usan colas para gestionar trabajos de impresión.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 9,
+      "titulo": "Colas de Prioridad",
+      "descripcion": "Colas donde los elementos se extraen según su prioridad.",
+      "orden": 9,
+      "duracionEstimadaMin": 80,
+      "contenidos": [
+        {"titulo": "Priority Queues", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Una cola de prioridad es una estructura donde cada elemento tiene una prioridad y se extrae el de mayor prioridad primero."},
+        {"titulo": "Implementación con Heap", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: Priority Queue", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 178257920},
+        {"titulo": "Diagrama Priority Queue", "tipo": "IMAGE", "ordenEnClase": 4}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 9 - Colas de Prioridad",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué estructura se usa comúnmente para implementar una cola de prioridad?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Heap", "Array", "Lista enlazada", "Árbol AVL"], "respuestaCorrecta": "Heap"},
+          {"enunciado": "¿Cuál es la complejidad de extraer el elemento de mayor prioridad en un heap?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(log n)", "O(1)", "O(n)", "O(n log n)"], "respuestaCorrecta": "O(log n)"},
+          {"enunciado": "Los algoritmos de camino más corto como Dijkstra usan colas de prioridad.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 10,
+      "titulo": "Deques",
+      "descripcion": "Double-ended queues: inserción y eliminación en ambos extremos.",
+      "orden": 10,
+      "duracionEstimadaMin": 65,
+      "contenidos": [
+        {"titulo": "Deques (Double-Ended Queues)", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un deque permite insertar y eliminar elementos tanto al inicio como al final en tiempo O(1)."},
+        {"titulo": "Video: Deques", "tipo": "VIDEO", "ordenEnClase": 2, "tamanioBytes": 125829120},
+        {"titulo": "Ejercicios Deques", "tipo": "PDF", "ordenEnClase": 3, "tamanioBytes": 153600}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 10 - Deques",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué significa Deque?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Double-Ended Queue", "Double Entry Queue", "Distributed Equal Queue", "Dynamic Extended Queue"], "respuestaCorrecta": "Double-Ended Queue"},
+          {"enunciado": "¿En cuántos extremos puede insertar y eliminar un Deque?", "tipo": "MULTIPLE_CHOICE", "opciones": ["2", "1", "3", "4"], "respuestaCorrecta": "2"},
+          {"enunciado": "Un Deque puede simular tanto una pila como una cola.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 11,
+      "titulo": "Árboles - Conceptos Fundamentales",
+      "descripcion": "Terminología de árboles: nodo, raíz, hojas, altura, profundidad.",
+      "orden": 11,
+      "duracionEstimadaMin": 85,
+      "contenidos": [
+        {"titulo": "Conceptos de Árboles", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un árbol es una estructura de datos jerárquica no lineal compuesta por nodos conectados por aristas, sin ciclos."},
+        {"titulo": "Slides: Árboles", "tipo": "PPTX", "ordenEnClase": 2, "tamanioBytes": 614400},
+        {"titulo": "Video: Árboles Fundamentales", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 209715200},
+        {"titulo": "Visualización Árbol", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/bst"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 11 - Conceptos de Árboles",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cómo se llama el nodo sin hijos en un árbol?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Hoja", "Raíz", "Interno", "Padre"], "respuestaCorrecta": "Hoja"},
+          {"enunciado": "¿Cuántas raíces tiene un árbol?", "tipo": "MULTIPLE_CHOICE", "opciones": ["1", "0", "2", "Depende del árbol"], "respuestaCorrecta": "1"},
+          {"enunciado": "La altura de un árbol es la longitud del camino más largo desde la raíz hasta una hoja.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 12,
+      "titulo": "Árboles Binarios",
+      "descripcion": "Árboles donde cada nodo tiene a lo sumo dos hijos.",
+      "orden": 12,
+      "duracionEstimadaMin": 80,
+      "contenidos": [
+        {"titulo": "Árboles Binarios", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un árbol binario es un árbol donde cada nodo tiene como máximo dos hijos: el hijo izquierdo y el hijo derecho."},
+        {"titulo": "Propiedades Árboles Binarios", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 256000},
+        {"titulo": "Video: Binary Trees", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 188743680}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 12 - Árboles Binarios",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuántos hijos puede tener como máximo un nodo en un árbol binario?", "tipo": "MULTIPLE_CHOICE", "opciones": ["2", "1", "3", "Ilimitado"], "respuestaCorrecta": "2"},
+          {"enunciado": "¿Cuántos nodos puede tener un árbol binario completo de altura h?", "tipo": "MULTIPLE_CHOICE", "opciones": ["2^(h+1)-1", "2^h", "h*2", "h+1"], "respuestaCorrecta": "2^(h+1)-1"},
+          {"enunciado": "Un árbol binario lleno tiene todos sus nodos con 0 o 2 hijos.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 13,
+      "titulo": "Recorrido de Árboles",
+      "descripcion": "Recorridos inorden, preorden, postorden y por niveles.",
+      "orden": 13,
+      "duracionEstimadaMin": 85,
+      "contenidos": [
+        {"titulo": "Tipos de Recorrido", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Los recorridos de árboles incluyen: preorden (raíz-izq-der), inorden (izq-raíz-der), postorden (izq-der-raíz) y BFS por niveles."},
+        {"titulo": "Diagrama Recorridos", "tipo": "IMAGE", "ordenEnClase": 2},
+        {"titulo": "Video: Tree Traversals", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 209715200},
+        {"titulo": "Ejercicios Recorridos", "tipo": "PDF", "ordenEnClase": 4, "tamanioBytes": 307200}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 13 - Recorridos",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "En un recorrido inorden de un BST, ¿en qué orden se visitan los elementos?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Ascendente", "Descendente", "Aleatorio", "Por niveles"], "respuestaCorrecta": "Ascendente"},
+          {"enunciado": "¿Qué recorrido visita primero la raíz?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Preorden", "Inorden", "Postorden", "BFS"], "respuestaCorrecta": "Preorden"},
+          {"enunciado": "El recorrido BFS usa una cola para procesar nodos por niveles.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 14,
+      "titulo": "Árboles Binarios de Búsqueda (BST)",
+      "descripcion": "BST: inserción, búsqueda y eliminación.",
+      "orden": 14,
+      "duracionEstimadaMin": 95,
+      "contenidos": [
+        {"titulo": "BST: Propiedad de Orden", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "En un BST, para cada nodo, todos los valores en el subárbol izquierdo son menores y todos los del derecho son mayores."},
+        {"titulo": "Operaciones BST", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 358400},
+        {"titulo": "Video: BST Operations", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 230686720},
+        {"titulo": "Visualización BST", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/bst"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 14 - BST",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad promedio de búsqueda en un BST balanceado?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(log n)", "O(n)", "O(1)", "O(n²)"], "respuestaCorrecta": "O(log n)"},
+          {"enunciado": "¿Cuál es la complejidad en el peor caso de un BST degenerado?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(n)", "O(log n)", "O(1)", "O(n log n)"], "respuestaCorrecta": "O(n)"},
+          {"enunciado": "La propiedad de orden del BST permite búsquedas eficientes.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 15,
+      "titulo": "Balanceo de Árboles AVL",
+      "descripcion": "Árboles auto-balanceados con rotaciones simples y dobles.",
+      "orden": 15,
+      "duracionEstimadaMin": 105,
+      "contenidos": [
+        {"titulo": "Árboles AVL", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un árbol AVL es un BST auto-balanceado donde la diferencia de altura entre subárboles izquierdo y derecho es como máximo 1."},
+        {"titulo": "Rotaciones AVL", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 409600},
+        {"titulo": "Video: AVL Trees", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 251658240},
+        {"titulo": "Visualización AVL", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/bst"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 15 - AVL",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es el factor de balance permitido en un árbol AVL?", "tipo": "MULTIPLE_CHOICE", "opciones": ["-1, 0, 1", "-2, -1, 0, 1, 2", "0, 1", "-1, 0"], "respuestaCorrecta": "-1, 0, 1"},
+          {"enunciado": "¿Cuántos tipos de rotaciones existen en un AVL?", "tipo": "MULTIPLE_CHOICE", "opciones": ["4", "2", "3", "1"], "respuestaCorrecta": "4"},
+          {"enunciado": "Un árbol AVL garantiza operaciones en O(log n) en el peor caso.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 16,
+      "titulo": "Árboles Rojo-Negro",
+      "descripcion": "Árbol auto-balanceado con propiedades de coloración.",
+      "orden": 16,
+      "duracionEstimadaMin": 110,
+      "contenidos": [
+        {"titulo": "Red-Black Trees", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un árbol Rojo-Negro es un BST auto-balanceado con propiedades de coloración que garantizan balance aproximado."},
+        {"titulo": "Propiedades Red-Black", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 460800},
+        {"titulo": "Video: Red-Black Trees", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 262144000}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 16 - Rojo-Negro",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuántos colores tienen los nodos de un árbol Rojo-Negro?", "tipo": "MULTIPLE_CHOICE", "opciones": ["2", "3", "4", "1"], "respuestaCorrecta": "2"},
+          {"enunciado": "¿Puede un nodo rojo tener un hijo rojo en un árbol Rojo-Negro?", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Falso"},
+          {"enunciado": "Java's TreeMap usa internamente un árbol Rojo-Negro.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 17,
+      "titulo": "Árboles B y B+",
+      "descripcion": "Árboles multi-nivel usados en bases de datos.",
+      "orden": 17,
+      "duracionEstimadaMin": 100,
+      "contenidos": [
+        {"titulo": "B-Trees y B+-Trees", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Los árboles B son estructuras balanceadas de múltiples claves por nodo, usadas en bases de datos y sistemas de archivos."},
+        {"titulo": "B-Trees en Bases de Datos", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 512000},
+        {"titulo": "Video: B-Trees", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 241172480},
+        {"titulo": "Comparación B vs B+", "tipo": "IMAGE", "ordenEnClase": 4}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 17 - B y B+",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿En qué tipo de sistemas se usan principalmente los árboles B?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Bases de datos y sistemas de archivos", "Compiladores", "Redes sociales", "Inteligencia artificial"], "respuestaCorrecta": "Bases de datos y sistemas de archivos"},
+          {"enunciado": "¿En qué se diferencia un árbol B+ de un árbol B?", "tipo": "MULTIPLE_CHOICE", "opciones": ["B+ almacena datos solo en hojas", "B+ tiene menos niveles", "B+ usa rotaciones", "B+ es un árbol binario"], "respuestaCorrecta": "B+ almacena datos solo en hojas"},
+          {"enunciado": "Los árboles B garantizan que todas las hojas están al mismo nivel.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 18,
+      "titulo": "Montículos (Heaps)",
+      "descripcion": "Min-heap y max-heap, heapify y heap sort.",
+      "orden": 18,
+      "duracionEstimadaMin": 90,
+      "contenidos": [
+        {"titulo": "Heaps: Min y Max", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un heap es un árbol binario completo donde cada nodo cumple la propiedad de heap: en max-heap el padre es mayor o igual a sus hijos."},
+        {"titulo": "Heap Sort", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 358400},
+        {"titulo": "Video: Heaps", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 220200960},
+        {"titulo": "Visualización Heap", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/heap"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 18 - Heaps",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "En un max-heap, ¿qué elemento se encuentra en la raíz?", "tipo": "MULTIPLE_CHOICE", "opciones": ["El mayor", "El menor", "El del medio", "El último insertado"], "respuestaCorrecta": "El mayor"},
+          {"enunciado": "¿Cuál es la complejidad de construir un heap desde un array?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(n)", "O(n log n)", "O(log n)", "O(n²)"], "respuestaCorrecta": "O(n)"},
+          {"enunciado": "Heap Sort tiene complejidad O(n log n) en el peor caso.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 19,
+      "titulo": "Árboles de Segmento",
+      "descripcion": "Segment trees para consultas de rango eficientes.",
+      "orden": 19,
+      "duracionEstimadaMin": 100,
+      "contenidos": [
+        {"titulo": "Segment Trees", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un árbol de segmento permite responder consultas de rango (suma, mínimo, máximo) y actualizaciones en O(log n)."},
+        {"titulo": "Implementación Segment Tree", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 409600},
+        {"titulo": "Video: Segment Trees", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 230686720}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 19 - Segment Trees",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad de una consulta de rango en un Segment Tree?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(log n)", "O(n)", "O(1)", "O(n log n)"], "respuestaCorrecta": "O(log n)"},
+          {"enunciado": "¿Cuánta memoria usa un Segment Tree para n elementos?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(n)", "O(log n)", "O(n²)", "O(1)"], "respuestaCorrecta": "O(n)"},
+          {"enunciado": "Los Segment Trees pueden manejar consultas de suma de rangos.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 20,
+      "titulo": "Tries (Árboles de Prefijos)",
+      "descripcion": "Trie para almacenamiento y búsqueda de strings.",
+      "orden": 20,
+      "duracionEstimadaMin": 90,
+      "contenidos": [
+        {"titulo": "Tries", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un Trie es un árbol de búsqueda donde cada nodo representa un carácter. Permite búsqueda de palabras en O(m) donde m es la longitud de la palabra."},
+        {"titulo": "Aplicaciones de Tries", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: Tries", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 209715200},
+        {"titulo": "Diagrama Trie", "tipo": "IMAGE", "ordenEnClase": 4}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 20 - Tries",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad de buscar una palabra de longitud m en un Trie?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(m)", "O(n)", "O(log n)", "O(m*n)"], "respuestaCorrecta": "O(m)"},
+          {"enunciado": "¿Para qué se usan comúnmente los Tries?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Autocompletado", "Ordenamiento", "Cálculo numérico", "Grafos"], "respuestaCorrecta": "Autocompletado"},
+          {"enunciado": "Un Trie puede almacenar un conjunto de strings de forma eficiente.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 21,
+      "titulo": "Grafos - Conceptos Fundamentales",
+      "descripcion": "Vértices, aristas, grafos dirigidos y no dirigidos.",
+      "orden": 21,
+      "duracionEstimadaMin": 90,
+      "contenidos": [
+        {"titulo": "Conceptos de Grafos", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un grafo G = (V, E) consiste en un conjunto de vértices V y aristas E que los conectan. Pueden ser dirigidos o no dirigidos, ponderados o no."},
+        {"titulo": "Slides: Grafos", "tipo": "PPTX", "ordenEnClase": 2, "tamanioBytes": 716800},
+        {"titulo": "Video: Graph Fundamentals", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 251658240},
+        {"titulo": "Visualización Grafos", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/graphds"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 21 - Grafos Fundamentales",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cómo se llaman los elementos de un grafo que representan entidades?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Vértices (nodos)", "Aristas", "Pesos", "Caminos"], "respuestaCorrecta": "Vértices (nodos)"},
+          {"enunciado": "¿Qué tipo de grafo tiene aristas con dirección?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Dirigido (dígrafo)", "No dirigido", "Ponderado", "Bipartito"], "respuestaCorrecta": "Dirigido (dígrafo)"},
+          {"enunciado": "Un árbol es un caso especial de grafo sin ciclos.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 22,
+      "titulo": "Representación de Grafos",
+      "descripcion": "Matriz de adyacencia y lista de adyacencia.",
+      "orden": 22,
+      "duracionEstimadaMin": 80,
+      "contenidos": [
+        {"titulo": "Representaciones de Grafos", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Los grafos se pueden representar como matriz de adyacencia (O(V²) espacio) o lista de adyacencia (O(V+E) espacio)."},
+        {"titulo": "Comparación de Representaciones", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 256000},
+        {"titulo": "Video: Graph Representations", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 188743680}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 22 - Representación",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuánto espacio usa una matriz de adyacencia para V vértices?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(V²)", "O(V+E)", "O(E)", "O(V)"], "respuestaCorrecta": "O(V²)"},
+          {"enunciado": "¿Cuándo es preferible usar lista de adyacencia?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Grafos dispersos", "Grafos densos", "Siempre", "Grafos sin pesos"], "respuestaCorrecta": "Grafos dispersos"},
+          {"enunciado": "La lista de adyacencia es más eficiente en memoria para grafos dispersos.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 23,
+      "titulo": "Búsqueda en Amplitud (BFS)",
+      "descripcion": "BFS: exploración por niveles usando una cola.",
+      "orden": 23,
+      "duracionEstimadaMin": 85,
+      "contenidos": [
+        {"titulo": "BFS Algorithm", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "BFS explora el grafo nivel por nivel usando una cola. Encuentra el camino más corto en grafos no ponderados."},
+        {"titulo": "BFS con Ejemplos", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: BFS", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 209715200},
+        {"titulo": "Visualización BFS", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/dfsbfs"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 23 - BFS",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué estructura de datos usa BFS?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Cola", "Pila", "Heap", "Árbol"], "respuestaCorrecta": "Cola"},
+          {"enunciado": "¿Cuál es la complejidad de BFS en un grafo con V vértices y E aristas?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(V+E)", "O(V²)", "O(E log V)", "O(V log E)"], "respuestaCorrecta": "O(V+E)"},
+          {"enunciado": "BFS garantiza el camino más corto en grafos no ponderados.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 24,
+      "titulo": "Búsqueda en Profundidad (DFS)",
+      "descripcion": "DFS: exploración recursiva usando una pila.",
+      "orden": 24,
+      "duracionEstimadaMin": 85,
+      "contenidos": [
+        {"titulo": "DFS Algorithm", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "DFS explora tan profundo como sea posible antes de retroceder. Se implementa recursivamente o con una pila explícita."},
+        {"titulo": "DFS: Aplicaciones", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: DFS", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 209715200}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 24 - DFS",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué estructura de datos usa DFS iterativo?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Pila", "Cola", "Heap", "Deque"], "respuestaCorrecta": "Pila"},
+          {"enunciado": "¿Cuál es una aplicación de DFS?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Detección de ciclos", "Camino más corto", "Ordenamiento", "Búsqueda binaria"], "respuestaCorrecta": "Detección de ciclos"},
+          {"enunciado": "DFS puede detectar ciclos en grafos dirigidos.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 25,
+      "titulo": "Algoritmo de Dijkstra",
+      "descripcion": "Camino más corto desde un vértice fuente.",
+      "orden": 25,
+      "duracionEstimadaMin": 100,
+      "contenidos": [
+        {"titulo": "Dijkstra's Algorithm", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "El algoritmo de Dijkstra encuentra el camino más corto desde un vértice fuente a todos los demás vértices en grafos ponderados con aristas no negativas."},
+        {"titulo": "Dijkstra: Implementación", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 409600},
+        {"titulo": "Video: Dijkstra", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 241172480},
+        {"titulo": "Visualización Dijkstra", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/sssp"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 25 - Dijkstra",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Dijkstra funciona con aristas de peso negativo?", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Falso"},
+          {"enunciado": "¿Cuál es la complejidad de Dijkstra con heap binario?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O((V+E) log V)", "O(V²)", "O(E log E)", "O(V log E)"], "respuestaCorrecta": "O((V+E) log V)"},
+          {"enunciado": "Dijkstra usa una cola de prioridad para seleccionar el vértice con menor distancia.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 26,
+      "titulo": "Algoritmo de Bellman-Ford",
+      "descripcion": "Camino más corto con aristas de peso negativo.",
+      "orden": 26,
+      "duracionEstimadaMin": 90,
+      "contenidos": [
+        {"titulo": "Bellman-Ford", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Bellman-Ford calcula caminos más cortos y puede detectar ciclos de peso negativo, a diferencia de Dijkstra."},
+        {"titulo": "Comparación Dijkstra vs Bellman-Ford", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: Bellman-Ford", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 220200960}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 26 - Bellman-Ford",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuántas iteraciones realiza Bellman-Ford?", "tipo": "MULTIPLE_CHOICE", "opciones": ["V-1", "V", "E", "V²"], "respuestaCorrecta": "V-1"},
+          {"enunciado": "¿Bellman-Ford puede detectar ciclos de peso negativo?", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"},
+          {"enunciado": "La complejidad de Bellman-Ford es O(VE).", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 27,
+      "titulo": "Algoritmo de Floyd-Warshall",
+      "descripcion": "Todos los pares de caminos más cortos.",
+      "orden": 27,
+      "duracionEstimadaMin": 90,
+      "contenidos": [
+        {"titulo": "Floyd-Warshall", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Floyd-Warshall calcula los caminos más cortos entre todos los pares de vértices en O(V³)."},
+        {"titulo": "Floyd-Warshall: Matriz de distancias", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 256000},
+        {"titulo": "Video: Floyd-Warshall", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 188743680},
+        {"titulo": "Diagrama Floyd-Warshall", "tipo": "IMAGE", "ordenEnClase": 4}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 27 - Floyd-Warshall",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad de Floyd-Warshall?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(V³)", "O(V²)", "O(VE)", "O(E log V)"], "respuestaCorrecta": "O(V³)"},
+          {"enunciado": "¿Floyd-Warshall calcula caminos entre un par o todos los pares?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Todos los pares", "Un par", "Un vértice origen", "Solo vértices adyacentes"], "respuestaCorrecta": "Todos los pares"},
+          {"enunciado": "Floyd-Warshall puede detectar ciclos negativos si la diagonal de la matriz es negativa.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 28,
+      "titulo": "Árboles de Expansión Mínima (Kruskal y Prim)",
+      "descripcion": "MST: algoritmos de Kruskal y Prim.",
+      "orden": 28,
+      "duracionEstimadaMin": 100,
+      "contenidos": [
+        {"titulo": "Minimum Spanning Tree", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Un árbol de expansión mínima conecta todos los vértices de un grafo con el mínimo peso total de aristas."},
+        {"titulo": "Kruskal vs Prim", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 409600},
+        {"titulo": "Video: MST Algorithms", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 251658240},
+        {"titulo": "Visualización MST", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/mst"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 28 - MST",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué estructura usa Kruskal para detectar ciclos?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Union-Find", "Heap", "Cola", "Pila"], "respuestaCorrecta": "Union-Find"},
+          {"enunciado": "¿Cuál es la complejidad de Kruskal con ordenamiento?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(E log E)", "O(V²)", "O(VE)", "O(E+V)"], "respuestaCorrecta": "O(E log E)"},
+          {"enunciado": "Prim es más eficiente que Kruskal en grafos densos.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 29,
+      "titulo": "Tablas Hash",
+      "descripcion": "Hash tables: estructura, colisiones y resolución.",
+      "orden": 29,
+      "duracionEstimadaMin": 95,
+      "contenidos": [
+        {"titulo": "Hash Tables", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Una tabla hash mapea claves a valores usando una función hash. Ofrece O(1) promedio para inserción, búsqueda y eliminación."},
+        {"titulo": "Resolución de Colisiones", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 358400},
+        {"titulo": "Video: Hash Tables", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 230686720},
+        {"titulo": "Visualización Hash", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/hashtable"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 29 - Hash Tables",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad promedio de búsqueda en una tabla hash?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(1)", "O(log n)", "O(n)", "O(n²)"], "respuestaCorrecta": "O(1)"},
+          {"enunciado": "¿Qué ocurre cuando dos claves producen el mismo índice en una tabla hash?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Colisión", "Overflow", "Underflow", "Error"], "respuestaCorrecta": "Colisión"},
+          {"enunciado": "Un buen factor de carga para una tabla hash es menor a 0.75.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 30,
+      "titulo": "Funciones Hash y Colisiones",
+      "descripcion": "Diseño de funciones hash y técnicas de manejo de colisiones.",
+      "orden": 30,
+      "duracionEstimadaMin": 85,
+      "contenidos": [
+        {"titulo": "Funciones Hash", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Una buena función hash distribuye uniformemente las claves. Las colisiones se manejan con encadenamiento o direccionamiento abierto."},
+        {"titulo": "Técnicas de Colisión", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: Hash Functions", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 209715200}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 30 - Hash Functions",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué técnica de resolución de colisiones usa listas enlazadas?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Encadenamiento separado", "Sondeo lineal", "Doble hashing", "Cuadrado perfecto"], "respuestaCorrecta": "Encadenamiento separado"},
+          {"enunciado": "¿Cuál es el factor de carga en una tabla hash?", "tipo": "MULTIPLE_CHOICE", "opciones": ["n/m (elementos/cubetas)", "m/n", "n²/m", "log(n/m)"], "respuestaCorrecta": "n/m (elementos/cubetas)"},
+          {"enunciado": "El sondeo lineal puede causar clustering primario.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 31,
+      "titulo": "Ordenamiento - Algoritmos Básicos",
+      "descripcion": "Bubble Sort, Selection Sort, Insertion Sort.",
+      "orden": 31,
+      "duracionEstimadaMin": 90,
+      "contenidos": [
+        {"titulo": "Algoritmos de Ordenamiento Básicos", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Los algoritmos básicos de ordenamiento incluyen Bubble Sort, Selection Sort e Insertion Sort, todos con complejidad O(n²)."},
+        {"titulo": "Comparación de Algoritmos", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 358400},
+        {"titulo": "Video: Basic Sorting", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 220200960},
+        {"titulo": "Visualización Sorting", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/sorting"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 31 - Ordenamiento Básico",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad de Bubble Sort en el peor caso?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(n²)", "O(n log n)", "O(n)", "O(1)"], "respuestaCorrecta": "O(n²)"},
+          {"enunciado": "¿Cuál algoritmo básico es el mejor para arrays casi ordenados?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Insertion Sort", "Bubble Sort", "Selection Sort", "Todos igual"], "respuestaCorrecta": "Insertion Sort"},
+          {"enunciado": "Selection Sort siempre realiza O(n²) comparaciones independientemente del input.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 32,
+      "titulo": "Ordenamiento - Algoritmos Avanzados",
+      "descripcion": "Merge Sort, Quick Sort, Counting Sort, Radix Sort.",
+      "orden": 32,
+      "duracionEstimadaMin": 105,
+      "contenidos": [
+        {"titulo": "Algoritmos Avanzados de Ordenamiento", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "Merge Sort y Quick Sort tienen complejidad O(n log n) promedio. Counting Sort y Radix Sort son algoritmos no comparativos con O(n+k)."},
+        {"titulo": "Quick Sort y Merge Sort", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 460800},
+        {"titulo": "Video: Advanced Sorting", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 262144000},
+        {"titulo": "Diagrama Merge Sort", "tipo": "IMAGE", "ordenEnClase": 4}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 32 - Ordenamiento Avanzado",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es la complejidad de Merge Sort en el peor caso?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(n log n)", "O(n²)", "O(n)", "O(log n)"], "respuestaCorrecta": "O(n log n)"},
+          {"enunciado": "¿Cuál es la complejidad de Quick Sort en el peor caso?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(n²)", "O(n log n)", "O(n)", "O(log n)"], "respuestaCorrecta": "O(n²)"},
+          {"enunciado": "Merge Sort es un algoritmo estable de ordenamiento.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 33,
+      "titulo": "Búsqueda Binaria y Variantes",
+      "descripcion": "Búsqueda binaria clásica y variantes como exponential search.",
+      "orden": 33,
+      "duracionEstimadaMin": 80,
+      "contenidos": [
+        {"titulo": "Búsqueda Binaria", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "La búsqueda binaria divide el espacio de búsqueda a la mitad en cada paso, logrando O(log n) en arrays ordenados."},
+        {"titulo": "Variantes de Búsqueda Binaria", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: Binary Search", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 188743680}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 33 - Búsqueda Binaria",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál es el requisito previo para aplicar búsqueda binaria?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Array ordenado", "Array desordenado", "Array circular", "Array vacío"], "respuestaCorrecta": "Array ordenado"},
+          {"enunciado": "¿Cuál es la complejidad de la búsqueda binaria?", "tipo": "MULTIPLE_CHOICE", "opciones": ["O(log n)", "O(n)", "O(1)", "O(n log n)"], "respuestaCorrecta": "O(log n)"},
+          {"enunciado": "La búsqueda binaria puede aplicarse en árboles BST.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 34,
+      "titulo": "Estructuras de Datos Avanzadas - Disjoint Set Union",
+      "descripcion": "Union-Find: structure for disjoint sets with path compression.",
+      "orden": 34,
+      "duracionEstimadaMin": 95,
+      "contenidos": [
+        {"titulo": "Disjoint Set Union (DSU)", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "DSU (Union-Find) mantiene una colección de conjuntos disjuntos con operaciones Union y Find casi en O(1) usando compresión de caminos."},
+        {"titulo": "DSU: Implementación", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 307200},
+        {"titulo": "Video: Union-Find", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 209715200},
+        {"titulo": "Visualización DSU", "tipo": "URL", "ordenEnClase": 4, "urlRecurso": "https://visualgo.net/en/ufds"}
+      ],
+      "evaluacion": {
+        "titulo": "Quiz 34 - DSU",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Qué técnicas optimizan el DSU?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Compresión de caminos y unión por rango", "Rotaciones y balanceo", "Hashing y encadenamiento", "BFS y DFS"], "respuestaCorrecta": "Compresión de caminos y unión por rango"},
+          {"enunciado": "¿Cuál es la aplicación principal de DSU en grafos?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Detectar componentes conexas", "Caminos más cortos", "Ordenamiento topológico", "BFS"], "respuestaCorrecta": "Detectar componentes conexas"},
+          {"enunciado": "El algoritmo de Kruskal usa DSU para detectar ciclos.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    },
+    {
+      "numero": 35,
+      "titulo": "Revisión General y Aplicaciones Prácticas",
+      "descripcion": "Repaso integral y proyectos prácticos con estructuras de datos.",
+      "orden": 35,
+      "duracionEstimadaMin": 120,
+      "contenidos": [
+        {"titulo": "Resumen del Curso", "tipo": "TEXT", "ordenEnClase": 1, "textoCuerpo": "En este curso hemos cubierto arrays, listas, pilas, colas, árboles, grafos, tablas hash y algoritmos de ordenamiento y búsqueda. Cada estructura tiene sus fortalezas y casos de uso ideales."},
+        {"titulo": "Guía de Selección de Estructuras", "tipo": "PDF", "ordenEnClase": 2, "tamanioBytes": 614400},
+        {"titulo": "Video: Aplicaciones Prácticas", "tipo": "VIDEO", "ordenEnClase": 3, "tamanioBytes": 314572800},
+        {"titulo": "Proyecto Final - Descripción", "tipo": "WORD", "ordenEnClase": 4, "tamanioBytes": 102400}
+      ],
+      "evaluacion": {
+        "titulo": "Evaluación Final - Estructuras de Datos",
+        "puntajeMaximo": 100,
+        "preguntas": [
+          {"enunciado": "¿Cuál estructura es más adecuada para implementar un historial de navegación (atrás/adelante)?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Dos pilas", "Una cola", "Un array", "Un heap"], "respuestaCorrecta": "Dos pilas"},
+          {"enunciado": "¿Qué estructura usar para encontrar el elemento mínimo en O(1)?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Min-Heap", "BST", "Array ordenado", "Lista enlazada"], "respuestaCorrecta": "Min-Heap"},
+          {"enunciado": "Para un sistema de autocompletado con millones de palabras, ¿qué estructura es más eficiente?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Trie", "Hash Table", "BST", "Array ordenado"], "respuestaCorrecta": "Trie"},
+          {"enunciado": "¿Cuál algoritmo usar para ordenar cuando se necesita estabilidad y O(n log n) garantizado?", "tipo": "MULTIPLE_CHOICE", "opciones": ["Merge Sort", "Quick Sort", "Heap Sort", "Bubble Sort"], "respuestaCorrecta": "Merge Sort"},
+          {"enunciado": "Los grafos pueden representar redes sociales donde las personas son vértices y las amistades son aristas.", "tipo": "VERDADERO_FALSO", "opciones": ["Verdadero", "Falso"], "respuestaCorrecta": "Verdadero"}
+        ]
+      }
+    }
+  ]
+}
