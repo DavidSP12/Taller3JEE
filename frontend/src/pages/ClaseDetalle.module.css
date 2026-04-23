@@ -1,0 +1,99 @@
+.back {
+  background: none; border: none; color: #2563eb;
+  cursor: pointer; font-size: 0.9rem; padding: 0; margin-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.numero { font-size: 0.85rem; color: #9ca3af; font-weight: 600; text-transform: uppercase; }
+.title { font-size: 1.7rem; font-weight: 800; color: #1e3a5f; margin: 0.25rem 0; }
+.desc  { color: #6b7280; margin: 0; }
+
+.actions { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.btnStart, .btnComplete {
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btnStart    { background: #2563eb; color: #fff; }
+.btnStart:hover:not(:disabled) { background: #1d4ed8; }
+
+.btnComplete { background: #10b981; color: #fff; }
+.btnComplete:hover:not(:disabled) { background: #059669; }
+
+.btnStart:disabled, .btnComplete:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.section { font-size: 1.2rem; font-weight: 700; color: #1e3a5f; margin: 1.5rem 0 0.75rem; }
+
+.contenidoList { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.contenidoCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+  flex-wrap: wrap;
+}
+
+.contenidoCard:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.1); }
+
+.tipoIcon { font-size: 1.4rem; }
+
+.contenidoInfo { flex: 1; }
+.contenidoTitulo { font-weight: 600; color: #1e3a5f; display: block; }
+.contenidoTipo   { font-size: 0.78rem; color: #9ca3af; }
+
+.recursoLink {
+  color: #2563eb;
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.textDetail {
+  width: 100%;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.evalBox {
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.evalTitle { font-weight: 700; color: #1e3a5f; margin: 0; }
+.evalMeta  { color: #6b7280; font-size: 0.85rem; margin: 0.25rem 0 0.75rem; }
+
+.btnEval {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnEval:hover { background: #1d4ed8; }

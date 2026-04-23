@@ -1,0 +1,74 @@
+.back {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #1e3a5f;
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.1s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateX(3px);
+}
+
+.numero {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #94a3b8;
+  min-width: 36px;
+}
+
+.info { flex: 1; }
+
+.claseTitulo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin: 0 0 0.25rem 0;
+}
+
+.claseDesc {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0 0 0.4rem 0;
+}
+
+.duracion { font-size: 0.8rem; color: #9ca3af; }
+
+.arrow {
+  font-size: 1.5rem;
+  color: #d1d5db;
+}

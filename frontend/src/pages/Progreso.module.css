@@ -1,0 +1,77 @@
+.title { font-size: 1.7rem; font-weight: 800; color: #1e3a5f; margin-bottom: 1.5rem; }
+
+.summary {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.summaryItem {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+  flex: 1;
+  min-width: 100px;
+}
+
+.big { font-size: 2rem; font-weight: 800; color: #2563eb; display: block; }
+.label { font-size: 0.8rem; color: #6b7280; }
+
+.bar {
+  background: #e5e7eb;
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.fill {
+  background: linear-gradient(90deg, #2563eb, #10b981);
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.row {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+.icon {
+  font-size: 1.2rem;
+  width: 28px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.completado  { color: #15803d; }
+.enProgreso  { color: #d97706; }
+.noIniciado  { color: #9ca3af; }
+
+.info { flex: 1; display: flex; flex-direction: column; }
+.claseTitulo { font-weight: 600; color: #1e3a5f; font-size: 0.95rem; }
+.tiempo      { font-size: 0.8rem; color: #9ca3af; }
+
+.estadoBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.estadoBadge.completado  { background: #dcfce7; color: #15803d; }
+.estadoBadge.enProgreso  { background: #fef9c3; color: #854d0e; }
+.estadoBadge.noIniciado  { background: #f3f4f6; color: #6b7280; }
+
+.empty { color: #9ca3af; font-style: italic; padding: 1rem 0; }

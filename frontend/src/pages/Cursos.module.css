@@ -1,0 +1,83 @@
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e3a5f;
+  margin-bottom: 1.5rem;
+}
+
+.empty {
+  color: #6b7280;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.15s;
+}
+
+.card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+
+.cardHeader { display: flex; justify-content: flex-end; }
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.activo   { background: #dcfce7; color: #15803d; }
+.inactivo { background: #fee2e2; color: #b91c1c; }
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin: 0;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: #4b5563;
+  flex: 1;
+  margin: 0;
+}
+
+.cardMeta {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.cardActions { margin-top: 0.5rem; }
+
+.btnPrimary, .btnEnroll {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnPrimary { background: #2563eb; color: #fff; }
+.btnPrimary:hover { background: #1d4ed8; }
+
+.btnEnroll { background: #10b981; color: #fff; }
+.btnEnroll:hover:not(:disabled) { background: #059669; }
+.btnEnroll:disabled { opacity: 0.6; cursor: not-allowed; }
