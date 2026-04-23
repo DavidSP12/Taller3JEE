@@ -10,6 +10,7 @@ public class InscripcionDTO {
     private Long id;
     private Long estudianteId;
     private Long cursoId;
+    private String cursoNombre;
     private LocalDateTime fechaInicio;
     private LocalDateTime fechaFin;
     private EstadoInscripcion estado;

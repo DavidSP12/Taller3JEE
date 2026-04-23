@@ -21,6 +21,10 @@ public class CursoService {
     private final ClaseRepository claseRepository;
     private final ContenidoRepository contenidoRepository;
 
+    public List<Curso> getAllCursos() {
+        return cursoRepository.findAll();
+    }
+
     public Curso getCurso(Long id) {
         return cursoRepository.findById(id)
                 .orElseThrow(() -> new jakarta.persistence.EntityNotFoundException("Curso not found: " + id));

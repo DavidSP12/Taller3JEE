@@ -1,0 +1,73 @@
+.title { font-size: 1.7rem; font-weight: 800; color: #1e3a5f; margin-bottom: 1.5rem; }
+
+.empty { text-align: center; padding: 3rem; color: #374151; }
+.hint  { color: #9ca3af; font-size: 0.9rem; }
+
+.list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+}
+
+.cardLeft { padding-top: 0.2rem; }
+.tipoIcon { font-size: 1.5rem; }
+
+.cardBody { flex: 1; }
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.tipo {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #1e3a5f;
+  text-transform: capitalize;
+}
+
+.prioridad {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+}
+
+.alta   { background: #fee2e2; color: #b91c1c; }
+.media  { background: #fef9c3; color: #854d0e; }
+.baja   { background: #dcfce7; color: #15803d; }
+
+.clase  { font-size: 0.85rem; color: #2563eb; font-weight: 600; margin: 0 0 0.3rem; }
+.motivo { color: #374151; font-size: 0.9rem; margin: 0 0 0.25rem; }
+.fecha  { color: #9ca3af; font-size: 0.78rem; margin: 0; }
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.btnVisto, .btnDescartar {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background 0.15s;
+}
+
+.btnVisto    { background: #dcfce7; color: #15803d; }
+.btnVisto:hover    { background: #bbf7d0; }
+
+.btnDescartar { background: #fee2e2; color: #b91c1c; }
+.btnDescartar:hover { background: #fecaca; }

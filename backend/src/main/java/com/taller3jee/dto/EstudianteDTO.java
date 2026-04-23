@@ -12,6 +12,7 @@ public class EstudianteDTO {
     private String nombre;
     private String apellido;
     private String email;
+    private String password;
     private LocalDateTime fechaRegistro;
     private EstadoEstudiante estado;
     private RolUsuario rol;

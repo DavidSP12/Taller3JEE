@@ -25,6 +25,13 @@ public class EvaluacionService {
     private final InscripcionRepository inscripcionRepository;
 
     @Transactional(readOnly = true)
+    public EvaluacionDTO getEvaluacionByClaseId(Long claseId) {
+        Evaluacion evaluacion = evaluacionRepository.findByClaseId(claseId)
+                .orElseThrow(() -> new EntityNotFoundException("No evaluation for clase: " + claseId));
+        return toEvaluacionDTO(evaluacion);
+    }
+
+    @Transactional(readOnly = true)
     public EvaluacionDTO getEvaluacion(Long id) {
         Evaluacion evaluacion = evaluacionRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Evaluacion not found: " + id));

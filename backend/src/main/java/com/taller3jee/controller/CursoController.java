@@ -6,7 +6,9 @@ import com.taller3jee.domain.Curso;
 import com.taller3jee.dto.ClaseDTO;
 import com.taller3jee.dto.ContenidoDTO;
 import com.taller3jee.dto.CursoDTO;
+import com.taller3jee.dto.EvaluacionDTO;
 import com.taller3jee.service.CursoService;
+import com.taller3jee.service.EvaluacionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +21,13 @@ import java.util.Map;
 public class CursoController {
 
     private final CursoService cursoService;
+    private final EvaluacionService evaluacionService;
+
+    @GetMapping("/api/v1/cursos")
+    public ResponseEntity<List<CursoDTO>> getCursos() {
+        return ResponseEntity.ok(cursoService.getAllCursos().stream()
+                .map(this::toCursoDTO).toList());
+    }
 
     @GetMapping("/api/v1/cursos/{id}")
     public ResponseEntity<CursoDTO> getCurso(@PathVariable Long id) {
@@ -40,6 +49,11 @@ public class CursoController {
     public ResponseEntity<List<ContenidoDTO>> getContenidos(@PathVariable Long id) {
         return ResponseEntity.ok(cursoService.getContenidos(id).stream()
                 .map(this::toContenidoDTO).toList());
+    }
+
+    @GetMapping("/api/v1/clases/{id}/evaluacion")
+    public ResponseEntity<EvaluacionDTO> getEvaluacionByClase(@PathVariable Long id) {
+        return ResponseEntity.ok(evaluacionService.getEvaluacionByClaseId(id));
     }
 
     @GetMapping("/api/v1/contenidos/{id}/recurso")
