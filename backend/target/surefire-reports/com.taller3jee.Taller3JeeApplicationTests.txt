@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.taller3jee.Taller3JeeApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.276 s -- in com.taller3jee.Taller3JeeApplicationTests
